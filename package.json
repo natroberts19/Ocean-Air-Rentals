@@ -1,0 +1,40 @@
+{
+  "name": "oar",
+  "version": "1.0.0",
+  "description": "Ocean Air Renatals (OAR) is a full-stack web application that allows users to reserve beach equipment.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natroberts19/OceanAirRentals.git"
+  },
+  "keywords": [
+    "oar",
+    "ocean",
+    "air",
+    "rentals",
+    "beach",
+    "equipment"
+  ],
+  "author": "Natalie Roberts, Ryan Tucker, Gabe Vermund, Rick Joyce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natroberts19/OceanAirRentals/issues"
+  },
+  "homepage": "https://github.com/natroberts19/OceanAirRentals#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql2": "^1.5.2",
+    "path": "^0.12.7",
+    "sequelize": "^4.33.4",
+    "twilio": "^3.11.3",
+    "weather.js": "^0.1.0"
+  }
+}
