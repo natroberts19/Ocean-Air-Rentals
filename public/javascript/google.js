@@ -1,3 +1,4 @@
+// This file just includes the pulling of frontend data!
 
 // Google Places API:
 function initMap() {
