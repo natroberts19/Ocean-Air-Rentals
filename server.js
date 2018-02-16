@@ -22,14 +22,12 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 // Routes
-require("./routes/html-routes.js")(app);
-
-// ** These will be whatever we decide to name our models/tables. **
-require("./routes/table1-api-routes.js")(app);
-require("./routes/table2-api-routes.js")(app);
+// require("./routes/html-routes.js")(app);
+// require("./routes/api-beach-routes")(app);
+// require("./routes/api-inventory-routes")(app);
 
 // Syncing our sequelize models and then starting our Express app
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
