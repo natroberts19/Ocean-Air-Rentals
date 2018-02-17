@@ -25,7 +25,7 @@ app.use(express.static("public"));
   require("./routes/html-routes.js")(app);
   require("./routes/api-reservation-routes")(app);
   // require("./routes/api-beach-routes")(app);
-  // require("./routes/api-inventory-routes")(app);
+  require("./routes/api-inventory-routes")(app);
 
 // OR use the recommended .router method,
   // var routeshtml = require("./routes/html-routes.js");
