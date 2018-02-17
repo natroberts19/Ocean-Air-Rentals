@@ -31,6 +31,6 @@ app.post("/api/manager", function(req, res) {
 
 // PUT route for updating reservation
 
-// DELETE route for updating reservation
+// DELETE route for deleting a reservation
 
 // Money view or reporting - future enhancement
