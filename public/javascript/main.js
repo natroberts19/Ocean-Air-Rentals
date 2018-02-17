@@ -341,6 +341,12 @@
 
             console.log(newReservation);
 
+            // submitReservation(newReservation);
+            
+            // function submitReservation(newReservation) {
+                $.post("/api/reservation", newReservation, function() {});
+            
+            //   }
             
         });
         
