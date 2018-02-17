@@ -13,6 +13,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
+  // This route will allow the manager to view the portal page.
   app.get("/manager", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/manager.html"));
   });
