@@ -2727,7 +2727,6 @@ html.no-csstransitions .home-content__main {
 
 /* ===================================================================
  * # clients
- *
  * ------------------------------------------------------------------- */
 .s-clients {
     padding-top: 16.2rem;
@@ -2764,7 +2763,12 @@ html.no-csstransitions .home-content__main {
 /* ------------------------------------------------------------------- 
  * ## testimonials
  * ------------------------------------------------------------------- */
-.clients-testimonials {
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+ .clients-testimonials {
     margin-top: 4.2rem;
     padding-top: 7.2rem;
     text-align: center;

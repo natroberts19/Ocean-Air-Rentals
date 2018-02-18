@@ -319,8 +319,7 @@
         <div class="row clients-outer" data-aos="fade-up">
             <div class="col-full">
                 <div class="clients">
-                    
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/cocoabeach.jpg" style="width:128px;height:128px"/>Cocoa Beach</a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/cocoabeach.jpg" style="width:128px;height:128px"/>Cocoa Beach</a>                  
                     <a href="#0" title="" class="clients__slide"><img src="images/clients/daytonabeach.jpg" style="width:128px;height:128px" />Daytona Beach</a>
                     <a href="#0" title="" class="clients__slide"><img src="images/clients/destinbeach.jpg" style="width:128px;height:128px"/>Destin Beach</a>
                     <a href="#0" title="" class="clients__slide"><img src="images/clients/miamibeach.jpg" style="width:128px;height:128px"/>Miami Beach</a>
@@ -331,13 +330,21 @@
                     <a href="#0" title="" class="clients__slide"><img src="images/clients/siestalkeybeach.jpg" style="width:128px;height:128px" />Siesta Key</a>
                     <a href="#0" title="" class="clients__slide"><img src="images/clients/staugustinebeach.jpg" style="width:128px;height:128px"/>St. Augustine Beach</a>
                     <a href="#0" title="" class="clients__slide"><img src="images/clients/stgeorgebeach.jpg" style="width:128px;height:128px"/>St. George Island</a>
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/stpetebeach.JPG" style="width:128px;height:128px"/>St. Petersburg</a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/stpetebeach.JPG" style="width:128px;height:128px"/>St. Pete Beach</a>
                     <a href="#0" title="" class="clients__slide"><img src="images/clients/verobeach.jpg" style="width:128px;height:128px"/>Vero Beach</a>
                      
                 </div> <!-- end clients -->
             </div> <!-- end col-full -->
         </div> <!-- end clients-outer -->
 
+        <div class="row clients-outer">
+            <div class="col-full">
+                <div id="map">
+                </div>
+            </div>
+        </div>
+
+<!-- Beach information section -->
         <div class="row clients-testimonials" data-aos="fade-up">
             <div class="col-full">
                 <div class="testimonials">
@@ -375,12 +382,14 @@
 
                     </div>
 
-                </div><!-- end testimonials -->
-                
-            </div> <!-- end col-full -->
-        </div> <!-- end client-testimonials -->
+                <!-- end testimonials -->
+            </div> 
+            <!-- end col-full -->
+        </div>            
+        <!-- end client-testimonials -->
+    </div> 
 
-    </section> <!-- end s-clients -->
+    <!-- </section> end s-clients -->
 
 
     <!-- contact
@@ -445,7 +454,7 @@
                     <div class="form-field">
                         <select class="form-field" id="reservationItem" name="reservationItem" type="text" id="reservationItem" placeholder="Rental Item" value="" class="full-width">
                             <option>Rental Item</option>
-                            <option>Chairs & Umbrella</option>
+                            <option>Chairs &amp; Umbrella</option>
                             <option>Paddle Board</option>
                             <option>Body Board</option>
                             <option>Snokel Set</option>
@@ -644,8 +653,11 @@
     <!-- Java Script
     ================================================== -->
     <script src="javascript/jquery-3.2.1.min.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvG-9VfsYrh5zHhx_GPPHDjUPnA5Xh0QE&libraries=places&callback=initMap"></script>
     <script src="javascript/plugins.js"></script>
     <script src="javascript/main.js"></script>
+    <script src="javascript/google.js"></script>
 
 </body>
 

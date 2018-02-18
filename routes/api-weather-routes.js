@@ -19,6 +19,7 @@ app.get("/api/weather/:city/:state", function(req, res){
         if(err) console.log(err);
        
         res.json(result);
+        console.log(result);
       });
       
 });
