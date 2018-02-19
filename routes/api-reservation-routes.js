@@ -3,7 +3,7 @@ var db = require("../models");
 
 module.exports = function(app) {
 
-// POST route for saving a new reservation
+    // POST route for saving a new reservation
 app.post("/api/reservation", function(req, res) {
     console.log("reservation", req.body);
     db.Newreservation.create({
