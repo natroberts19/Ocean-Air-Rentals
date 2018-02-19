@@ -5,7 +5,7 @@ var db = require("../models");
 
 module.exports = function(app) {
 
-// GET route for showing all reservations
+// GET route for showing all reservations. This will use Handlebars to display on the frontend.
 app.get("/api/manager", function(req, res) {
     db.Newreservation.findAll({})
     .then(function(dbNewreservation) {

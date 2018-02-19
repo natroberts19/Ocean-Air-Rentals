@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
+
 app.get("/api/weather/:city/:state", function(req, res){
     weather.find({search: `${req.params.city}, ${req.params.state}`, degreeType: 'F'}, function(err, result) {
         if(err) console.log(err);

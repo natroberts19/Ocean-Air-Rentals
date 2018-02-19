@@ -85,6 +85,17 @@ body {
     padding: 0;
 }
 
+/* Styling for the Beach links that are acting as inputs. */
+.beach-btn {
+    cursor: pointer;
+    font-size: 16px;
+    border-style: none;
+    background: none;
+}
+
+.beach-btn:hover {
+    background: blue;
+}
 
 /* ------------------------------------------------------------------- 
  * ## links
@@ -642,7 +653,7 @@ select {
     -moz-appearance: none;
     -ms-appearance: none;
     -o-appearance: none;
-    appearance: none;
+    /* appearance: none; */
     text-indent: 0.01px;
     text-overflow: '';
     margin: 0;
@@ -2763,6 +2774,8 @@ html.no-csstransitions .home-content__main {
 /* ------------------------------------------------------------------- 
  * ## testimonials
  * ------------------------------------------------------------------- */
+
+
 #map {
     height: 400px;
     width: 100%;
