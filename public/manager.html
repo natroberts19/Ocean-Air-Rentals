@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,36 +9,119 @@
     <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <title>OAR-Manager Portal</title>
     <style>
-       
     </style>
 </head>
+
 <body>
     <h1>Ocean Air Rentals</h1>
     <h2>Manager Portal</h2>
     <!-- Append rentable inventory - table data here. -->
-    <button id="showReservations">GET - Show  CURRENT reservations</button>
-    <div id="allReservations"></div>
+    <button id="showReservations">GET - Show CURRENT reservations</button>
+
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">VIEW Current OAR Reservations</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover" id='reservation-table'>
+                    <thead>
+                        <tr>
+                            <th>Reservation ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Beach</th>
+                            <th>Rental Item</th>
+                            <th>Rental Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <br>
-    <br> 
     <br>
-    <br> 
     <br>
-    <br>    
-    
+    <br>
+    <br>
+    <br>
+
     <form>
-        Beach Name:<input type="text" id="beachName"name="" ><br>
-        Rental Item:<input type="text" id="rentalItem" name=""><br>
-        Price:<input type="text" id="price"name=""><br>
-        Rentalable:<input type="text" id="rentable"name=""><br>
+        Beach Name:
+        <input type="text" id="beachName" name="">
+        <br> Rental Item:
+        <input type="text" id="rentalItem" name="">
+        <br> Price:
+        <input type="text" id="price" name="">
+        <br> Rentalable:
+        <input type="text" id="rentable" name="">
+        <br>
         <button id="postInventory">Post - Create new Inventory</button>
-      </form>
-    
+    </form>
+
+    <form>
+        <div class="form-group">
+            <label for="beachName">Beach Name</label>
+            <select class="form-control" id="beachName">
+                <option>Select from below</option>
+                <option>Cocoa Beach</option>
+                <option>Daytona Beach</option>
+                <option>Destin</option>
+                <option>Key West</option>
+                <option>Miami Beach</option>
+                <option>New Smyrna Beach</option>
+                <option>Panama City Beach</option>
+                <option>Pensacola Beach</option>
+                <option>Sanibel Island</option>
+                <option>Siesta Key</option>
+                <option>St Augustine</option>
+                <option>St George Island</option>
+                <option>St Pete</option>
+                <option>Vero Beach</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="rentalItem">Rental Item</label>
+            <select class="form-control" id="rentalItem">
+                <option>Select from below:</option>
+                <option>Rental Item</option>
+                <option>Chairs &amp; Umbrella</option>
+                <option>Paddle Board</option>
+                <option>Body Board</option>
+                <option>Snokel Set</option>
+                <option>Private Cabana</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="price">Price $</label>
+            <input type="text" class="form-control" placeholder="$" id="price">
+        </div>
+
+        <div class="form-group">
+            <label for="rentable">Rentable</label>
+            <select class="form-control" id="rentable">
+                <option>Select from below:</option>
+                <option>true</option>
+                <option>fasle</option>
+            </select>
+        </div>
+
+
+        <button id="postInventory">Post - Create new Inventory</button>
+    </form>
+
     <div id="inventory"></div>
     <!-- Messaging button??. -->
     <div></div>
-    
-    
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/manager.js"></script>
 </body>
+
 </html>
