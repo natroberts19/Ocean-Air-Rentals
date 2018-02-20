@@ -1,0 +1,60 @@
+#button-style {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    float: right;
+}
+
+#title {
+    color: rgb(163, 20, 20);
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.jumbotron {
+    background-repeat: repeat-x;
+    background-size: 50%;
+    background-position: left, bottom;
+    background-color: white;
+    padding: 0px 10px 10px 10px;
+    border-radius: 8px;
+    margin: 20px 20px 20px 20px;
+    height: 250px;
+}
+
+#style {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background: rgb(75, 168, 240);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.panel.panel-default {
+    border-color: rgb(75, 168, 240);
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+.input-group {
+    margin: 15px;
+}
+
+#basic-addon1 {
+    color: rgb(163, 20, 20);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+.btn.btn-default {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background: rgb(75, 168, 240);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.table {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
