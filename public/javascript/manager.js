@@ -23,9 +23,6 @@ $("#showReservations").on("click", function (event) {
         }
 //$('#reservation-table').html(reservationData);
 
-
-
-
     });
 });
 
