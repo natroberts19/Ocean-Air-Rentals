@@ -24,18 +24,8 @@ app.use(express.static("public"));
 // Routes
   require("./routes/html-routes.js")(app);
   require("./routes/api-reservation-routes")(app);
-  // require("./routes/api-beach-routes")(app);
+  require("./routes/api-beach-routes")(app);
   require("./routes/api-inventory-routes")(app);
-  // require("./routes/api-weather-routes")(app);
-
-// OR use the recommended .router method,
-  // var routeshtml = require("./routes/html-routes.js");
-  // app.use("/", routeshtml);
-  // app.use("/manager", routeshtml);
-
-  // var routeapi = require("./routes/api-routes.js");
-  // app.use("/api/beach/:name", routesapi);
-
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync().then(function() {
