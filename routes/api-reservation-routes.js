@@ -3,20 +3,11 @@ var db = require("../models");
 
 var twilio = require('twilio');
 
-var accountSid = 'ACc46cd71b5e05ea658f06e1cb9905d5ae'; // Your Account SID from www.twilio.com/console
-var authToken = 'b4f437ebfdb34b725e688bcb9b7e736e'; // Your Auth Token from www.twilio.com/console
+var accountSid = process.env.TWILIO_SID; // Your Account SID from www.twilio.com/console
+var authToken = process.env.TWILIO_AUTHTOKEN; // Your Auth Token from www.twilio.com/console
 
 var twilio = require('twilio');
 var client = new twilio(accountSid, authToken);
-
-client.messages.create({
-    body: 'Hello from Node',
-    to: '+12345678901', // Text this number
-    from: '+12345678901' // From a valid Twilio number
-  })
-  .then((message) => console.log(message.sid));
-
-
 
 module.exports = function (app) {
 
