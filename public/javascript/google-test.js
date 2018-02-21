@@ -11,6 +11,8 @@ function initMap() {
   });
   // This now creates the map based on the options in the map object above.
 
+  console.log("map:", map);
+  
   var infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
 
