@@ -85,6 +85,17 @@ body {
     padding: 0;
 }
 
+/* Styling for the Beach links that are acting as inputs. */
+.beach-btn {
+    cursor: pointer;
+    font-size: 16px;
+    border-style: none;
+    background: none;
+}
+
+.beach-btn:hover {
+    background: blue;
+}
 
 /* ------------------------------------------------------------------- 
  * ## links
@@ -642,7 +653,7 @@ select {
     -moz-appearance: none;
     -ms-appearance: none;
     -o-appearance: none;
-    appearance: none;
+    /* appearance: none; */
     text-indent: 0.01px;
     text-overflow: '';
     margin: 0;
@@ -2763,6 +2774,8 @@ html.no-csstransitions .home-content__main {
 /* ------------------------------------------------------------------- 
  * ## testimonials
  * ------------------------------------------------------------------- */
+
+
 #map {
     height: 400px;
     width: 100%;
@@ -2952,7 +2965,7 @@ html.no-csstransitions .home-content__main {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .8;
+    opacity: .895;
     background-color: #151515;
 }
 
@@ -3036,7 +3049,7 @@ html.no-csstransitions .home-content__main {
 .contact-content textarea,
 .contact-content select {
     color: rgba(255, 255, 255, 0.6);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.61);
     margin-bottom: .9rem;
 }
 
@@ -3049,7 +3062,7 @@ html.no-csstransitions .home-content__main {
 .contact-content input[type="password"]:focus,
 .contact-content textarea:focus,
 .contact-content select:focus {
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 0.6);
     border-bottom: 1px solid #39b54a;
 }
 
@@ -3060,19 +3073,19 @@ html.no-csstransitions .home-content__main {
 .contact-content input::-webkit-input-placeholder,
 .contact-content select::-webkit-input-placeholder,
 .contact-content textarea::-webkit-input-placeholder {
-    color: #4f4f4f;
+    color: whitesmoke;
 }
 
 .contact-content input:-moz-placeholder,
 .contact-content select:-moz-placeholder,
 .contact-content textarea:-moz-placeholder {
-    color: #4f4f4f;    /* Firefox 18- */
+    color: whitesmoke;    /* Firefox 18- */
 }
 
 .contact-content input::-moz-placeholder,
 .contact-content select::-moz-placeholder,
 .contact-content textarea::-moz-placeholder {
-    color: #4f4f4f;    /* Firefox 19+ */
+    color: whitesmoke;    /* Firefox 19+ */
 }
 
 .contact-content input:-ms-input-placeholder,
@@ -3340,7 +3353,9 @@ footer {
     font-size: 15px;
     line-height: 2;
     text-align: center;
-    color: rgba(255, 255, 255, 0.3);
+    color: black;
+    background-color: rgb(69,216,110);
+
 }
 
 footer h4 {
@@ -3381,14 +3396,14 @@ footer .row {
 
 .footer-logo {
     display: block;
-    margin: -.6rem 0 3.6rem 0;
+    /* margin: -.6rem 0 3.6rem 0; */
     padding: 0;
     outline: 0;
     border: none;
-    width: 85px;
-    height: 28px;
+    width: 170px;
+    height: 100px;
     background: url("../images/OARlogo.png") no-repeat center;
-    background-size: 85px 28px;
+    background-size: 170px;
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
