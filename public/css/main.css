@@ -3048,7 +3048,7 @@ html.no-csstransitions .home-content__main {
 .contact-content input[type="password"],
 .contact-content textarea,
 .contact-content select {
-    color: rgba(255, 255, 255, 0.6);
+    /* color: rgba(255, 255, 255, 0.6); */
     border-bottom: 1px solid rgba(255, 255, 255, 0.61);
     margin-bottom: .9rem;
 }
