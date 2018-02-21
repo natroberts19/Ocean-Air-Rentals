@@ -5,8 +5,9 @@
  $(".beach-btn").on("click", function() {
      
      // Identify and capture the specific beach value that was clicked.
-     weatherBeach = $(this).attr("value");
-     console.log("Clicked Beach: ", weatherBeach);
+    //  weatherBeach = $(this).attr("value");
+     weatherBeach = $(this).attr("data-beach");
+     console.log("Weather Clicked Beach: ", weatherBeach);
  
      // Now we GET the weather data from the weather-js backend package.
      // The value of the searchedBeach is then inserted in the GET request at the end of the URL to replace :City/:State. 
