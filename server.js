@@ -1,10 +1,9 @@
-
 // This file is the initial starting point for the Node/Express server.
+require("dotenv").config();
 
 // Dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
-require("dotenv").config();
 
 // Sets up the Express App
 var app = express();
@@ -23,10 +22,10 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 // Routes
-  // require("./routes/html-routes.js")(app);
-  // require("./routes/api-reservation-routes")(app);
-  // require("./routes/api-beach-routes")(app);
-  // require("./routes/api-inventory-routes")(app);
+require("./routes/html-routes.js")(app);
+require("./routes/api-reservation-routes")(app);
+require("./routes/api-beach-routes")(app);
+require("./routes/api-inventory-routes")(app);
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync().then(function() {
