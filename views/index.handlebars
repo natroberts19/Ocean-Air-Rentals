@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/manager.css">
+    <link rel="stylesheet" type="text/css" href="..public/css/manager.css">
     <title>OAR-Manager Portal</title>
     <style>
     </style>
@@ -24,7 +24,7 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Current OAR Reservations</h3>
             </div>
-            <!-- Append current reservations - table data here. -->
+            <!-- Append current reservations - table data below. -->
             <div class="panel-body">
                 <table class="table table-hover" id='reservation-table'>
                     <thead>
@@ -44,25 +44,12 @@
                 </table>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
 
-        <br>
-        <br>
-        <br>
-
-        <!-- Do we still need this form? -->
-        <!-- <form>
-            Beach Name:
-            <input type="text" id="beachName" name="">
-            <br> Rental Item:
-            <input type="text" id="rentalItem" name="">
-            <br> Price:
-            <input type="text" id="price" name="">
-            <br> Rentable:
-            <input type="text" id="rentable" name="">
-            <br>
-            <button id="postInventory">Post - Create new Inventory</button>
-        </form> -->
-        <br>
+        <!-- form to add inventory items. -->
         <form>
             <div class="form-group">
                 <label for="beachName">Beach Name</label>
@@ -110,18 +97,45 @@
                     <option>false</option>
                 </select>
             </div>
-
-
             <button class="btn btn-default" id="postInventory">POST - Create new Inventory item</button>
         </form>
 
-        <div id="inventory"></div>
-        <!-- Messaging button??. -->
+<!-- display added inventory items. -->
+        <div id="inventory">
+            <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Current OAR Reservations</h3>
+            </div>
+            <!-- Append new inventory - table data below. -->
+            <div class="panel-body">
+                <table class="table table-hover" id='reservation-table'>
+                    <thead>
+                        <tr>
+                            <th>Inventory ID</th>
+                            <th>Beach Location</th>
+                            <th>Rental Item</th>
+                            <th>Price</th>
+                            <th>Rentable</th>
+                            <th>Created Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {{#each inventory }} {{/each}}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        </div>
+        
         <div></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascript/manager.js"></script>
+    <script type="text/javascript" src="..public/javascript/manager.js"></script>
 </body>
 
 </html>
