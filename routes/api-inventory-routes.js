@@ -39,11 +39,11 @@ app.delete("/manager/:id", function(req, res) {
       id: req.params.id
     }
   })
+
   .then(function(dbNewreservation) {
     res.json(dbNewreservation);
   });
 });
-
 
 // POST route for adding new beach inventory items.
 app.post("/api/manager", function(req, res) {
