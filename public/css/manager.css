@@ -1,7 +1,14 @@
-#button-style {
+body,
+h1,
+h2,
+h3,
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+.table {
     font-family: 'Lato', sans-serif;
     font-size: 14px;
-    float: right;
 }
 
 #title {
@@ -12,9 +19,6 @@
 }
 
 .jumbotron {
-    background-repeat: repeat-x;
-    background-size: 50%;
-    background-position: left, bottom;
     background-color: white;
     padding: 0px 10px 10px 10px;
     border-radius: 8px;
@@ -22,28 +26,15 @@
     height: 250px;
 }
 
-#style {
-    font-family: 'Lato', sans-serif;
-    color: white;
-    background: rgb(75, 168, 240);
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.panel.panel-default {
+.panel-heading {
     border-color: rgb(75, 168, 240);
     border-width: 2px;
-    border-radius: 8px;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(75, 168, 240);
 }
 
 .input-group {
     margin: 15px;
-}
-
-#basic-addon1 {
-    color: rgb(163, 20, 20);
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
 }
 
 .btn.btn-default {
@@ -52,9 +43,5 @@
     background: rgb(75, 168, 240);
     font-weight: bold;
     font-size: 14px;
-}
-
-.table {
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
+    margin-bottom: 10px;
 }
