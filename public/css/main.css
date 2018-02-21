@@ -3091,13 +3091,13 @@ html.no-csstransitions .home-content__main {
 .contact-content input:-ms-input-placeholder,
 .contact-content select:-ms-input-placeholder,
 .contact-content textarea:-ms-input-placeholder {
-    color: #4f4f4f;
+    color: whitesmoke;
 }
 
 .contact-content input.placeholder,
 .contact-content select.placeholder,
 .contact-content textarea.placeholder {
-    color: #4f4f4f !important;
+    color: whitesmoke !important;
 }
 .contact-primary, .contact-secondary {
     float: left;
