@@ -31,6 +31,21 @@ app.post("/api/manager", function(req, res) {
 
 // PUT route for updating reservation
 
+
+
 // DELETE route for deleting a reservation
+app.delete("/manager/:id", function(req, res) {
+  db.Post.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(function(dbPost) {
+    res.json(dbPost);
+  });
+});
+
+
+
 
 // Money view or reporting - future enhancement
