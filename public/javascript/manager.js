@@ -18,13 +18,20 @@ $("#showReservations").on("click", function (event) {
 
 
             $("#reservation-table > thead").append("<tr><td>" + dbNewreservation[i].id + "</td><td>" + dbNewreservation[i].name + "</td><td>" +
-                dbNewreservation[i].email + "</td><td>" + dbNewreservation[i].phone + "</td><td>" + dbNewreservation[i].beach + "</td><td>" + dbNewreservation[i].rentalitem + "</td><td>" + dbNewreservation[i].rentaldate + "</td><td><button class='editRow' value='edit'>Edit</button>" + "</td><td><button class='deleteRow' value='deleterow'>Delete</button>");
+                dbNewreservation[i].email + "</td><td>" + dbNewreservation[i].phone + "</td><td>" + dbNewreservation[i].beach + "<button class='editRow' value='edit'>Edit</button>" + "</td><td>" + dbNewreservation[i].rentalitem + "<button class='editRow' value='edit'>Edit</button>" + "</td><td>" + dbNewreservation[i].rentaldate + "</td><td><button class='editRow' value='edit'>Edit</button>" + "</td><td><button class='deleteRow' value='deleterow'>Delete</button>");
         }
         //delete button onclick event + route
         $(".deleteRow").on("click", function (event) {
             console.log("DELETE button clicked")
 
-            //DESTROY DB CODE
+            $.ajax({
+                method: "DELETE",
+                url: "/manager/:id" 
+              })
+              .then(function() {
+                alert("reservation deleted");
+                //not sure what goes here.
+              });
 
         });
 
@@ -58,5 +65,28 @@ $("#postInventory").on("click", function (event) {
     $('#rentalItem').val('');
     $('#price').val('');
     $('#rentable').val('');
+
+});
+
+//revenue by date - manager
+$("#revenueByDate").on("click", function (event) {
+    event.preventDefault();
+    console.log("searchdate button clicked")
+    searchDate = $("#searchDate").val()
+    console.log(searchDate);
+
+    //get the db then sum where date = searchDate
+    //jquery the sum to manager.html @ <div id="revenueByDateDiv"> 
+
+});
+
+//revenue total- manager
+$("#totalSales").on("click", function (event) {
+    event.preventDefault();
+    console.log("total sales button clicked")
+  
+
+    //get the db then sum all the rows
+    //jquery the sum to manager.html @ <div id="totalSalesDiv">
 
 });
