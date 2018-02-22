@@ -14,22 +14,18 @@ app.get("/api/manager", function(req, res) {
     });
   });
 
-// POST route for adding inventory
-app.post("/api/manager", function(req, res) {
-    console.log("manager post new inv", req.body);
-    db.Newinventory.create({
-      beach: req.body.beachName,
-      rentalitem: req.body.rentalItem,
-      price: req.body.price,
-      rentable: req.body.rentable
-    })
-    .then(function(dbInventory) {
-      res.json(dbInventory);
-    });
-  });
-
-
 // PUT route for updating reservation
+app.put("/api/manager", function(req, res) {
+  db.Newreservation.update(req.body,
+    {
+      where: {
+        id: req.body.id
+      }
+    })
+  .then(function(dbNewreservation) {
+    res.json(dbNewreservation);
+  });
+});
 
 
 // DELETE route for deleting a reservation
@@ -45,7 +41,7 @@ app.delete("/manager/:id", function(req, res) {
   });
 });
 
-// POST route for adding new beach inventory items.
+// POST route for adding inventory (new version of this has been copied to api-manager-routes)
 app.post("/api/manager", function(req, res) {
   console.log("manager post new inv", req.body);
   db.Newinventory.create({
