@@ -1524,7 +1524,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     letter-spacing: .25rem;
     margin-bottom: 4.8rem;
     margin-top: .9rem;
-    color: #39b54a;
+    color: #06a1d2;
 }
 
 .header-nav p {
@@ -3400,10 +3400,10 @@ footer .row {
     padding: 0;
     outline: 0;
     border: none;
-    width: 170px;
+    /* width: 170px; */
     height: 100px;
     background: url("../images/OARlogo.png") no-repeat center;
-    background-size: 170px;
+    /* background-size: 170px; */
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
