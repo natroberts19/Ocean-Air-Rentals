@@ -1,5 +1,4 @@
 # Ocean Air Rentals (OAR)
-________________________________________________________________________________________________________________________
 
 ## Business Description:
 
@@ -17,7 +16,6 @@ Users can also interact with the UI to locate specific beach information that in
 
 This application also includes a Manager Portal page that provides an OAR manager with visibility to back-end database information to view, edit, delete reservations and to manage inventory levels.
 
-________________________________________________________________________________________________________________________
 
 ## Design Specs and Technologies:
 
@@ -42,7 +40,6 @@ Our fully mobile-responsive UI was achieved using a Glint professional, no-cost 
 * Selected test scripts were written using **mocha** and **chai** npm packages.
 * Our middle-ware functionality is achieved through **body-parser** npm.
 
-________________________________________________________________________________________________________________________
 
 ## See our App: 
 
