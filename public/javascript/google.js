@@ -103,18 +103,8 @@ $(".beach-btn").on("click", function () {
   googleBeachClicked = $(this).attr("data-beach");
   console.log("Google Clicked Beach: ", googleBeachClicked);
 
-  // Now loop through the googleBeach array.
   // If googleBeachClicked is equal to googleBeach value, then run function initMap().
   // ________________________________________________________________________________
-
-  // for (var i = 0; i < googleBeach.length; i++) {
-  //   console.log("Give me all the Beach values: ", googleBeach[i].value);
-  //   if (googleBeach[i].value === googleBeachClicked) {
-  //     initMap();
-  //   } else {
-  //     $("#map").text("Sorry, the beach data is not available at this time.");
-  //   }
-  // }
 
   if (googleBeach[googleBeachClicked]) {
     console.log("googleBeach clicked:", googleBeach[googleBeachClicked]);
@@ -164,8 +154,7 @@ $(".beach-btn").on("click", function () {
           
           // Adds a pop-up information window onto the marker.
           infowindow.setContent('<div>Ocean Air Rentals pick-up location: <br><strong>' + place.name + '</strong><br>' +
-            'Rating: ' + place.rating + '<br> Website: ' + place.website + '<br> Address: ' +
-            place.formatted_address + '</div>');
+            'Rating: ' + place.rating + '<br><a href="'+place.website+'" target="_blank">' + place.website + '</a><br> Address: ' + place.formatted_address + '</div>');
           infowindow.open(map, this);
         });
 
