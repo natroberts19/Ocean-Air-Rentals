@@ -93,9 +93,9 @@ body {
     background: none;
 }
 
-.beach-btn:hover {
+/* .beach-btn:hover {
     background: blue;
-}
+} */
 
 /* ------------------------------------------------------------------- 
  * ## links
@@ -107,7 +107,7 @@ a {
 }
 
 a:hover, a:focus, a:active {
-    color: #39b54a;
+    color: #06a1d2;
 }
 
 a:hover, a:active {
@@ -556,7 +556,7 @@ form,
 }
 
 .line-scale-pulse-out > div {
-    background-color: #39b54a;
+    background-color: #06a1d2;
     width: 4px;
     height: 35px;
     border-radius: 2px;
@@ -843,8 +843,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-    background: #39b54a;
-    border-color: #39b54a;
+    background: #06a1d2;
+    border-color: #06a1d2;
     color: #FFFFFF;
 }
 
@@ -858,8 +858,8 @@ button.btn--primary:focus,
 input[type="submit"].btn--primary:focus,
 input[type="reset"].btn--primary:focus,
 input[type="button"].btn--primary:focus {
-    background: #33a242;
-    border-color: #33a242;
+    background: #2cbddf;
+    border-color: #2cbddf;
 }
 
 
@@ -1257,7 +1257,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     line-height: 1.333;
     text-transform: uppercase;
     letter-spacing: .25rem;
-    color: #39b54a;
+    color: #06a1d2;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -1431,7 +1431,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .slick-slider .slick-dots li.slick-active button,
 .slick-slider .slick-dots li:hover button {
-    background: #39b54a;
+    background: #06a1d2;
 }
 
 
@@ -1468,11 +1468,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-logo a {
     display: block;
-    margin: 9px 0 0 0;
+    margin: 9px 9px 0 0;
     padding: 0;
     outline: 0;
     border: none;
-    width: 80px;
+    /* width: 80px; */
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -1662,7 +1662,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
-    color: #39b54a;
+    color: #06a1d2;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
@@ -1870,8 +1870,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__scroll a::before {
-    border-bottom: 2px solid #39b54a;
-    border-right: 2px solid #39b54a;
+    border-bottom: 2px solid #06a1d2;
+    border-right: 2px solid #06a1d2;
     content: '';
     display: block;
     height: 8px;
@@ -1895,7 +1895,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     display: block;
     width: 2px;
     height: 10.2rem;
-    background-color: #39b54a;
+    background-color: #06a1d2;
     position: absolute;
     right: 7.2rem;
     bottom: 0;
@@ -2211,7 +2211,7 @@ html.no-csstransitions .home-content__main {
 .s-about {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #39b54a;
+    background-color: #06a1d2;
     color: #010507;
     position: relative;
 }
@@ -3009,7 +3009,7 @@ html.no-csstransitions .home-content__main {
     display: block;
     width: 2px;
     height: 20.4rem;
-    background-color: #39b54a;
+    background-color: #06a1d2;
     position: absolute;
     left: 50%;
     top: -10.2rem;
@@ -3036,7 +3036,7 @@ html.no-csstransitions .home-content__main {
 
 .contact-content h5 {
     margin-top: 0;
-    color: #39b54a;
+    color: #06a1d2;
 }
 
 .contact-content input[type="email"],
@@ -3354,7 +3354,7 @@ footer {
     line-height: 2;
     text-align: center;
     color: black;
-    background-color: rgb(69,216,110);
+    background-color: #06a1d2;
 
 }
 
@@ -3463,8 +3463,8 @@ footer .row {
     top: 0;
     right: 0;
     color: #FFFFFF;
-    background: #39b54a;
-    border-color: #39b54a;
+    background: #2cbddf;
+    border-color: #2cbddf;
     padding: 0 20px;
 }
 
