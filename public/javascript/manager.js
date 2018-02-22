@@ -18,7 +18,7 @@ $("#showReservations").on("click", function (event) {
 
 
             $("#reservation-table > thead").append("<tr><td>" + dbNewreservation[i].id + "</td><td>" + dbNewreservation[i].name + "</td><td>" +
-                dbNewreservation[i].email + "</td><td>" + dbNewreservation[i].phone + "</td><td>" + dbNewreservation[i].beach + "</td><td>" + dbNewreservation[i].rentalItem + "</td><td>" + dbNewreservation[i].rentalDate + "</td><td><button class='editRow' value='edit'>Edit</button>" + "</td><td><button class='deleteRow' value='deleterow'>Delete</button>");
+                dbNewreservation[i].email + "</td><td>" + dbNewreservation[i].phone + "</td><td>" + dbNewreservation[i].beach + "</td><td>" + dbNewreservation[i].rentalitem + "</td><td>" + dbNewreservation[i].rentaldate + "</td><td><button class='editRow' value='edit'>Edit</button>" + "</td><td><button class='deleteRow' value='deleterow'>Delete</button>");
         }
         //delete button onclick event + route
         $(".deleteRow").on("click", function (event) {
