@@ -29,7 +29,8 @@ app.put("/api/manager", function(req, res) {
 
 
 // DELETE route for deleting a reservation
-app.delete("/manager/:id", function(req, res) {
+app.delete("/api/manager/:id", function(req, res) {
+  console.log(req.params.id);
   db.Newreservation.destroy({
     where: {
       id: req.params.id
