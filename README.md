@@ -19,9 +19,10 @@ This application also includes a Manager Portal page that provides an OAR manage
 
 ## Design Specs and Technologies:
 
-### Responsive UI and Portal:
+### Responsive UI and Manager Portal:
 
-Our fully mobile-responsive UI was achieved using a Glint professional, no-cost template designed for small businesses. Designed by Colorlib, the template includes parallax effects and scroll animation for a smooth and clean user experience. The Manager Portal page is designed using Bootstrap responsive elements including layout, forms, table, and buttons.
+* Our fully mobile-responsive UI was achieved using a Glint professional, no-cost template designed for small businesses. Designed by Colorlib, the template includes parallax effects and scroll animation for a smooth and clean user experience. 
+* The Manager Portal page is designed using **Handlebars** templating and Bootstrap responsive elements including layout, forms, tables, and buttons.
 
 ### Back-end Server and Routing:
 
