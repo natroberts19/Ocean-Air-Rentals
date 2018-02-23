@@ -1,0 +1,8 @@
+#reservationName, 
+#reservationEmail, 
+#reservationPhone {
+    color: whitesmoke;
+}
+.beachMenu:hover {
+    background-color: #06a1d2 !important;
+}

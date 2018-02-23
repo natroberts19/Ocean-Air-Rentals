@@ -3002,7 +3002,7 @@ html.no-csstransitions .home-content__main {
     margin-top: -6px;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-right: 5px solid #39b54a;
+    border-right: 5px solid #06a1d2;
 }
 
 .contact__line {
@@ -3019,7 +3019,7 @@ html.no-csstransitions .home-content__main {
 .contact-content {
     max-width: 1000px;
     background-color: rgba(0, 0, 0, 0.2);
-    color: rgba(255, 255, 255, 0.4);
+    color: whitesmoke;
     padding-top: 6rem;
     padding-bottom: 6rem;
     font-family: "montserrat-light", sans-serif;
@@ -3048,7 +3048,7 @@ html.no-csstransitions .home-content__main {
 .contact-content input[type="password"],
 .contact-content textarea,
 .contact-content select {
-    /* color: rgba(255, 255, 255, 0.6); */
+    color: rgba(255, 255, 255, 0.6);
     border-bottom: 1px solid rgba(255, 255, 255, 0.61);
     margin-bottom: .9rem;
 }
@@ -3063,7 +3063,7 @@ html.no-csstransitions .home-content__main {
 .contact-content textarea:focus,
 .contact-content select:focus {
     color: rgba(255, 255, 255, 0.6);
-    border-bottom: 1px solid #39b54a;
+    border-bottom: 1px solid #06a1d2;
 }
 
 .contact-content button,
@@ -3073,7 +3073,8 @@ html.no-csstransitions .home-content__main {
 .contact-content input::-webkit-input-placeholder,
 .contact-content select::-webkit-input-placeholder,
 .contact-content textarea::-webkit-input-placeholder {
-    color: whitesmoke;
+    color: darkgray;
+    font-style: italic;
 }
 
 .contact-content input:-moz-placeholder,
