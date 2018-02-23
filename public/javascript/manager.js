@@ -1,11 +1,11 @@
 // This file will include functionality to receive table data to display on the manager.html page.
 
-$("#showReservations").on("click", function (event) {
-    event.preventDefault();
-    $.get("/api/manager", function (dbNewreservation) {
+// $("#showReservations").on("click", function (event) {
+//     event.preventDefault();
+//     $.get("/api/manager", function (dbNewreservation) {
         //console.log(dbNewreservation);
 
-        for (i = 0; i < dbNewreservation.length; i++) {
+        // for (i = 0; i < dbNewreservation.length; i++) {
             // $("#allReservations").append(dbNewreservation[i].id);
             // $("#allReservations").append(dbNewreservation[i].name);
             // $("#allReservations").append(dbNewreservation[i].email);
@@ -17,20 +17,23 @@ $("#showReservations").on("click", function (event) {
             // dbNewreservation[i].email + "</td><td>" + dbNewreservation[i].phone + "</td><td>" + dbNewreservation[i].rentalItem + "</td><td><button class='delRow' value='Delete'>Delete</button>");
 
 
-            $("#reservation-table > thead").append("<tr><td>" + dbNewreservation[i].id + "</td><td>" + dbNewreservation[i].name + "</td><td>" +
-                dbNewreservation[i].email + "</td><td>" + dbNewreservation[i].phone + "</td><td>" + dbNewreservation[i].beach + '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Beach</button>' + "</td><td>" + dbNewreservation[i].rentalitem + "<button class='editRow' value='edit'>Edit</button>" + "</td><td>" + dbNewreservation[i].rentaldate + "</td><td><button class='editRow' value='edit'>Edit</button>" + "</td><td><button class='deleteRow' value='deleterow'>Delete</button>");
-        }
+            // $("#reservation-table > thead").append("<tr><td>" + dbNewreservation[i].id + "</td><td>" + dbNewreservation[i].name + "</td><td>" +
+            //     dbNewreservation[i].email + "</td><td>" + dbNewreservation[i].phone + "</td><td>" + dbNewreservation[i].beach + '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Beach</button>' + "</td><td>" + dbNewreservation[i].rentalitem + "<button class='editRow' value='edit'>Edit</button>" + "</td><td>" + dbNewreservation[i].rentaldate + "</td><td><button class='editRow' value='edit'>Edit</button>" + "</td><td><button class='deleteRow' data-id='" + dbNewreservation[i].id + "' value='deleterow'>Delete</button>");
+        // }
+
         //delete button onclick event + route
         $(".deleteRow").on("click", function (event) {
-            console.log("DELETE button clicked")
-
+            
+            var id = $(this).attr("data-id");
+            console.log(    `DELETE button clicked for ${id}` );
             $.ajax({
                 method: "DELETE",
-                url: "/manager/:id" 
+                url: "/api/manager/" + id 
               })
               .then(function() {
-                alert("reservation deleted");
+                console.log("reservation deleted");
                 //not sure what goes here.
+                location.reload();
               });
 
         });
@@ -47,8 +50,8 @@ $("#showReservations").on("click", function (event) {
 
         //$('#reservation-table').html(reservationData);
 
-    });
-});
+//     });
+// });
 
 $("#postInventory").on("click", function (event) {
     event.preventDefault();
