@@ -6,3 +6,11 @@
 .beachMenu:hover {
     background-color: #06a1d2 !important;
 }
+
+#reservationBeach  option {
+    color: black;
+}
+
+#reservationItem option {
+    color: black;
+}

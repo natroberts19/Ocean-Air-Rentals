@@ -1,27 +1,30 @@
 <tr>
 	<td>
-	{{id}}
+		{{id}}
 	</td>
 	<td>
-	{{name}}
-	</td>
-    <td>
-	{{email}}
-	</td>
-    <td>
-	{{phone}}
-	</td>
-    <td>
-	{{beach}}
-	</td>
-    <td>
-	{{rentalitem}}
+		{{name}}
 	</td>
 	<td>
-	{{rentaldate}}
+		{{email}}
 	</td>
 	<td>
-<button class='deleteRow' data-id="{{this.id}}">Delete</button>
+		{{phone}}
+	</td>
+	<td><button class='editRow' id="editBeach" data-id="{{this.id}}">Edit Beach</button></td>
+	<td>
+		{{beach}}
+	</td>
+	<td><button class='editRow' id="editItem" data-id="{{this.id}}">Edit Item</button></td>
+	<td>
+		{{rentalitem}}
+	</td>
+	<td><button class='editRow' id="editDate" data-id="{{this.id}}">Edit Date</button></td>
+	<td>
+		{{rentaldate}}
+	</td>
+	<td>
+		<button class='deleteRow' data-id="{{this.id}}">Delete Row</button>
 
 	</td>
-</tr>  
+</tr>

@@ -5,7 +5,6 @@
             <h2>Manager Portal</h2>
         </div>
         <br>
-        <button class="btn btn-default" id="showReservations">GET - All Reservations</button>
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">Current OAR Reservations</h3>
@@ -19,9 +18,13 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone</th>
+                            <th></th>
                             <th>Beach</th>
+                            <th></th>
                             <th>Rental Item</th>
+                            <th></th>
                             <th>Rental Date</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,9 +37,37 @@
             </div>
         </div>
         <br>
-        <br>
-        <br>
-        <br>
+
+<!-- display added inventory items. -->
+        <div id="inventory">
+            <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Current OAR Inventory</h3>
+            </div>
+            <!-- Append new inventory - table data below. -->
+            <div class="panel-body">
+                <table class="table table-hover" id='reservation-table'>
+                    <thead>
+                        <tr>
+                            <th>Inventory ID</th>
+                            <th>Beach Location</th>
+                            <th>Rental Item</th>
+                            <th>Price</th>
+                            <th>Rentable</th>
+                            <th>Created Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        {{#each inventory}} 
+                        {{> tables/inventory-block}}
+                        {{/each}}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
 
         <!-- form to add inventory items. -->
         <form>
@@ -89,36 +120,4 @@
             <button class="btn btn-default" id="postInventory">POST - Create new Inventory item</button>
         </form>
 
-<!-- display added inventory items. -->
-        <div id="inventory">
-            <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title">Current OAR Reservations</h3>
-            </div>
-            <!-- Append new inventory - table data below. -->
-            <div class="panel-body">
-                <table class="table table-hover" id='reservation-table'>
-                    <thead>
-                        <tr>
-                            <th>Inventory ID</th>
-                            <th>Beach Location</th>
-                            <th>Rental Item</th>
-                            <th>Price</th>
-                            <th>Rentable</th>
-                            <th>Created Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            {{#each inventory }} {{/each}}
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
-        </div>
-        
-        <div></div>
     </div>

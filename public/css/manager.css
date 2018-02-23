@@ -6,6 +6,10 @@ p {
     font-family: 'Lato', sans-serif;
 }
 
+.editRow,
+.deleteRow {
+    font-size: 10px;
+}
 .table {
     font-family: 'Lato', sans-serif;
     font-size: 14px;
@@ -42,6 +46,6 @@ p {
     color: white;
     background: rgb(75, 168, 240);
     font-weight: bold;
-    font-size: 14px;
+    font-size: 10px;
     margin-bottom: 10px;
 }
