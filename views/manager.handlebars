@@ -1,50 +1,47 @@
-
-    <div class="container">
-        <div class="jumbtron">
-            <h1>Ocean Air Rentals</h1>
-            <h2>Manager Portal</h2>
+<div class="container">
+    <div class="jumbtron">
+        <h1>Ocean Air Rentals</h1>
+        <h2>Manager Portal</h2>
+    </div>
+    <br>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Current OAR Reservations</h3>
         </div>
-        <br>
+        <!-- New reservations - table data below. -->
+        <div class="panel-body">
+            <table class="table table-hover" id='reservation-table'>
+                <thead>
+                    <tr>
+                        <th>Reservation ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th></th>
+                        <th>Beach</th>
+                        <th></th>
+                        <th>Rental Item</th>
+                        <th></th>
+                        <th>Rental Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- appended data displays here. -->
+                    {{#each reservation}} {{> tables/reservation-block}} {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+
+    <!-- Display added inventory items. -->
+    <div id="inventory">
         <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title">Current OAR Reservations</h3>
-            </div>
-            <!-- Append current reservations - table data below. -->
-            <div class="panel-body">
-                <table class="table table-hover" id='reservation-table'>
-                    <thead>
-                        <tr>
-                            <th>Reservation ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th></th>
-                            <th>Beach</th>
-                            <th></th>
-                            <th>Rental Item</th>
-                            <th></th>
-                            <th>Rental Date</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- appended data displays here. -->
-                        {{#each reservation}} 
-                        {{> tables/reservation-block}}
-                        {{/each}}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <br>
-
-<!-- display added inventory items. -->
-        <div id="inventory">
-            <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">Current OAR Inventory</h3>
             </div>
-            <!-- Append new inventory - table data below. -->
+            <!-- Added inventory items - table data below. -->
             <div class="panel-body">
                 <table class="table table-hover" id='reservation-table'>
                     <thead>
@@ -59,18 +56,20 @@
                     </thead>
                     <tbody>
                         <tr>
-                        {{#each inventory}} 
-                        {{> tables/inventory-block}}
-                        {{/each}}
+                            {{#each inventory}} {{> tables/inventory-block}} {{/each}}
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        </div>
+    </div>
 
-        <!-- form to add inventory items. -->
-        <form>
+    <!-- form to add inventory items. -->
+    <form>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add Inventory</h3>
+            </div>
             <div class="form-group">
                 <label for="beachName">Beach Name</label>
                 <select class="form-control" id="beachName">
@@ -117,7 +116,8 @@
                     <option>false</option>
                 </select>
             </div>
-            <button class="btn btn-default" id="postInventory">POST - Create new Inventory item</button>
-        </form>
+            <button class="btn btn-default" id="postInventory">Add Inventory</button>
+        </div>
+    </form>
 
-    </div>
+</div>

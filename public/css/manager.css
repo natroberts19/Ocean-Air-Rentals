@@ -1,3 +1,4 @@
+/* This file is for formatting the manager portal only. */
 body,
 h1,
 h2,
@@ -10,16 +11,10 @@ p {
 .deleteRow {
     font-size: 10px;
 }
+
 .table {
     font-family: 'Lato', sans-serif;
     font-size: 14px;
-}
-
-#title {
-    color: rgb(163, 20, 20);
-    font-family: 'Lato', sans-serif;
-    font-size: 32px;
-    font-weight: bold;
 }
 
 .jumbotron {
@@ -48,4 +43,8 @@ p {
     font-weight: bold;
     font-size: 10px;
     margin-bottom: 10px;
+}
+
+#postInventory {
+    font-size: 14px;
 }

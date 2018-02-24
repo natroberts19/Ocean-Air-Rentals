@@ -9,7 +9,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  // This route will allow the manager to view the portal page. (Disable this to use Handlebars.)
+  // This route will allow the manager to view the portal page. (Disabled this to use Handlebars.)
   // app.get("/manager", function(req, res) {
   //   // res.sendFile(path.join(__dirname, "../public/manager.html"));
   //   res.render("index")

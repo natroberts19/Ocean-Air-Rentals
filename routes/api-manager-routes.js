@@ -2,44 +2,28 @@ var db = require("../models");
 
 module.exports = function (app) {
 
-
-  // GET route to get the handlebars
+  // GET route to get the handlebars tables for both reservation and inventory.
   app.get("/manager", function (req, res) {
     console.log("get manager route");
     db.Newreservation.findAll({})
-      .then(function(dbNewreservation) {
-          // res.json(dbNewreservation);
-          // console.log("manager get", dbNewreservation);
-          db.Newinventory.findAll({})
-          .then(function(dbNewinventory) {
+      .then(function (dbNewreservation) {
+        // res.json(dbNewreservation);
+        // console.log("manager get", dbNewreservation);
+        db.Newinventory.findAll({})
+          .then(function (dbNewinventory) {
             var hbsObject = {
-              reservation: dbNewreservation, 
+              reservation: dbNewreservation,
               inventory: dbNewinventory
             }
-            res.render("index", hbsObject);
+            res.render("manager", hbsObject);
           });
-          
+
       });
 
   });
 
-  // GET route to get the handlebars
-  // app.get("/manager", function (req, res) {
-  //   console.log("get manager route");
-  //   db.Newinventory.findAll({})
-  //     .then(function(dbNewinventory) {
-  //         // res.json(dbNewreservation);
-  //         // console.log("manager get", dbNewreservation);
-  //         var hbsObject = {
-  //           inventory: dbNewinventory
-  //         }
-  //         res.render("index", hbsObject);
-  //     });
-
-  // });
-
-  // POST route for adding inventory
-  app.post("/manager", function (req, res) {
+  // POST route for adding inventory (new version of this has been copied to api-manager-routes)
+  app.post("/api/manager", function (req, res) {
     console.log("manager post new inv", req.body);
     db.Newinventory.create({
         beach: req.body.beachName,
@@ -48,41 +32,10 @@ module.exports = function (app) {
         rentable: req.body.rentable
       })
       .then(function (dbInventory) {
-          res.json(dbInventory);
-        // res.render("inventory");
+        // res.json(dbInventory);
+        res.render("manager");
       });
   });
-
-  // // GET route for showing all reservations
-  // app.get("/api/manager", function (req, res) {
-  //   db.Newreservation.findAll({})
-  //     .then(function (dbNewreservation) {
-  //       res.json(dbNewreservation);
-  //       // console.log("manager get", dbNewreservation);
-  //     });
-  // });
-
-  // // GET route for showing all inventory
-  // app.get("/api/manager", function (req, res) {
-  //   db.Newinventory.findAll({})
-  //     .then(function (dbNewinventory) {
-  //       res.json(dbNewinventory);
-  //       console.log("manager get", dbNewinventory);
-  //     });
-  // });
-
-  // PUT route for updating reservation
-  app.put("/api/manager", function (req, res) {
-    db.Newreservation.update(req.body, {
-        where: {
-          id: req.body.id
-        }
-      })
-      .then(function (dbNewreservation) {
-        res.json(dbNewreservation);
-      });
-  });
-
 
   // DELETE route for deleting a reservation
   app.delete("/api/manager/:id", function (req, res) {
@@ -99,18 +52,16 @@ module.exports = function (app) {
       });
   });
 
-  // POST route for adding inventory (new version of this has been copied to api-manager-routes)
-  app.post("/api/manager", function (req, res) {
-    console.log("manager post new inv", req.body);
-    db.Newinventory.create({
-        beach: req.body.beachName,
-        rentalitem: req.body.rentalItem,
-        price: req.body.price,
-        rentable: req.body.rentable
-      })
-      .then(function (dbInventory) {
-        res.json(dbInventory);
-      });
-  });
+  // PUT route for updating reservation
+  // app.put("/api/manager", function (req, res) {
+  //   db.Newreservation.update(req.body, {
+  //       where: {
+  //         id: req.body.id
+  //       }
+  //     })
+  //     .then(function (dbNewreservation) {
+  //       res.json(dbNewreservation);
+  //     });
+  // });
 
 }
