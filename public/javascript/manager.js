@@ -1,12 +1,6 @@
-// This file will include functionality to receive table data to display on the manager.html page.
+// This file will include functionality to receive table data to display on the manager.handlebars view.
 
-// // Get inventory handlebars data
-// $.get("/api/manager", function (dbNewinventory) {
-//     console.log(dbNewinventory);
-
-// });
-
-//delete button onclick event + route for Reservation table
+//Delete button onclick event + route for Reservation table.
 $(".deleteRow").on("click", function (event) {
 
     var id = $(this).attr("data-id");
@@ -23,20 +17,7 @@ $(".deleteRow").on("click", function (event) {
 
 });
 
-//update button onclick event + route
-$(".editRow").on("click", function (event) {
-    console.log("EDIT button clicked")
-
-    //UPDATE DB CODE
-
-});
-
-$("#editBeach").on("click", function(event) {
-    // do your modal stuff here
-    var id = $(this).attr("data-id");
-})
-
-
+// Add inventory item button onclick event + route for the Inventory table.
 $("#postInventory").on("click", function (event) {
     event.preventDefault();
     var newInventory = {
@@ -53,27 +34,17 @@ $("#postInventory").on("click", function (event) {
     $('#price').val('');
     $('#rentable').val('');
 
+    location.reload();
 });
 
-//revenue by date - manager
-$("#revenueByDate").on("click", function (event) {
-    event.preventDefault();
-    console.log("searchdate button clicked")
-    searchDate = $("#searchDate").val()
-    console.log(searchDate);
-
-    //get the db then sum where date = searchDate
-    //jquery the sum to manager.html @ <div id="revenueByDateDiv"> 
-
+// Update button onclick event + route
+$(".editRow").on("click", function (event) {
+    console.log("EDIT button clicked")
+    
+    //UPDATE DB CODE
 });
 
-//revenue total- manager
-$("#totalSales").on("click", function (event) {
-    event.preventDefault();
-    console.log("total sales button clicked")
-
-
-    //get the db then sum all the rows
-    //jquery the sum to manager.html @ <div id="totalSalesDiv">
-
-});
+$("#editBeach").on("click", function (event) {
+    // Do  modal stuff here
+    var id = $(this).attr("data-id");
+})
